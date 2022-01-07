@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  height: 100vh;
+  background-color: #07091e;
+}
+h1 {
+  margin: 3rem 0 0 0;
+  text-align: center;
+  font-size: 3rem;
+  color: rgb(253,26,234);
+}
+.hr {
+  width: 50%;
+  margin: 1rem auto 0 auto;
+  border-bottom: 1px solid #666;
+  box-shadow: 5px 2px 5px rgb(253,26,234);
+}
+.btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+ul {
+  margin: 0;
+  display: flex;
+
+}
+ul li {
+  list-style: none;
+  margin: 0 1.5rem;
+}
+ul li a{
+  display: block;
+  width: 6rem;
+  height: 6rem;
+  background-color: #333;
+  color: #666;
+  line-height: 6.3rem;
+  text-align: center;
+  font-size: 3rem;
+  border-radius: 50%;
+  outline: none;
+  position: relative;
+  transition: 0.9s;
+}
+ul li a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(253,26,234);
+  border-radius: 50%;
+  z-index: -1;
+  transition: 0.5s;
+}
+ul li a:hover::before {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgb(253,26,234);
+}
+ul li a:hover {
+  color: rgb(253,26,234);
+  text-shadow: 0 0 5px rgb(253,26,234);
+  box-shadow: 0 0 5px rgb(253,26,234);
+}
+@media (max-width: 410px) {
+  h1 {
+    margin: 15rem 0 0 0;
+    font-size: 2.5rem;
+  }
+  .hr {
+    width: 70%;
+  }
+  ul li a {
+    width: 5rem;
+    height: 5rem;
+    font-size: 2.5rem;
+    line-height: 5.3rem;
+  }
+}
